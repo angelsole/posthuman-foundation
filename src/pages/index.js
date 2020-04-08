@@ -1,3 +1,13 @@
 import React from "react"
 
-export default () => <div>Hello world!</div>
+import Header from '../components/Header';
+import Hero from '../components/Hero';
+
+import '../assets/css/global.css';
+
+export default () => (
+  <div>
+    <Header />
+    <Hero />
+  </div>
+)
