@@ -2,18 +2,22 @@
 import React from "react"
 import styled from "styled-components"
 
-import heroBackground from '../../assets/images/rsz_sunspace.jpg';
+import space from '../../assets/videos/space_earth.mp4';
 
 const Section = styled.section`
-  background-image: url(${heroBackground});
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 `
 
 const Hero = () => (
   <Section>
-    hola
+    <video muted autoPlay playsInline loop poster="true">
+      <source src={space} />
+    </video>
   </Section>
 );
 

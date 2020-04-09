@@ -1,3 +1,42 @@
+@font-face {
+  font-family: "SpaceRanger";
+  src:
+  url("../../../static/fonts/spaceRanger/spacerangertitle-webfont.woff") format("woff"),
+  url('../../../static/fonts/spaceRanger/spacerangertitle-webfont.woff2') format('woff2');
+}
+
+
 li {
   list-style-type: none;
+}
+
+body {
+  color: #f1f1f1;
+  font-family: 'Roboto', sans-serif, arial;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+}
+
+div, h1, h2, h3, h4, h5, h6, p {
+  font-family: 'SpaceRanger', sans-serif, arial;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+img {
+  text-indent:-9999px
+}
+
+b {
+  font-family: 'Roboto', sans-serif, arial;
+  font-weight: bold;
+}
+
+input, label, select {
+  font-family: 'Roboto', sans-serif, arial;
+  text-overflow: ellipsis;
 }

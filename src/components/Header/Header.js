@@ -2,51 +2,59 @@
 import React from "react"
 import { Link } from "gatsby";
 import styled from "styled-components"
+import { Grid } from '@material-ui/core';
 
 import NavBar from '../NavBar';
 
 import logo from '../../assets/images/logo.svg';
 
-const HeaderContainer = styled.header`
-  transition-property: transform,height,-webkit-transform;
-  position: fixed;
-  left: 0;
-  right: 0;
-  height: 80px;
-  z-index: 100;
-`
-
-const HeaderContent = styled.div`
-  max-width: 1515px;
-  padding: 0 40px;
-  align-items: center;
-  display: flex;
-  height: 100%;
-  justify-content: space-between;
-  margin: 0 auto;
-  position: relative;
-  transition: transform .2s ease,-webkit-transform .2s ease;
-`
-
 const Logo = styled.img`
-  width: 100%;
   height: 100%;
+  width: 100%;
+`
+const Title = styled.h1`
+  color: white;
+  font-size: 24px;
+  margin-left: 15px;
 `
 
 const StyledLink = styled(props => <Link {...props} />)`
-  height: 100%;
-  position: relative;
-  z-index: 100;
+  text-decoration: none;
 `;
+
+const HeaderContainer = styled.div`
+  padding: 20px;
+`
+
 
 const Header = () => (
   <HeaderContainer>
-    <HeaderContent>
-      <StyledLink to="/">
-        <Logo alt="Posthuman Foundation Logo" src={logo} />
-      </StyledLink>
-      <NavBar />
-    </HeaderContent>
+    <Grid
+      container
+      spacing={3}
+      justify="space-between"
+      alignItems="center"
+    >
+      <Grid item xs={3}>
+        <StyledLink to="/">
+          <Grid
+            container
+            spacing={2}
+            alignItems="center"
+          >
+            <Grid item xs={2}>
+              <Logo alt="Posthuman Foundation Logo" src={logo} />
+            </Grid>
+            <Grid item xs={10}>
+              <Title>Posthuman Foundation</Title>
+            </Grid>
+          </Grid>
+        </StyledLink>
+      </Grid>
+      <Grid item xs={9}>
+        <NavBar />
+      </Grid>
+    </Grid>
   </HeaderContainer>
 )
 

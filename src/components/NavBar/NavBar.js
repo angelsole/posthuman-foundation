@@ -1,47 +1,36 @@
 
 import React from "react"
 import { Link } from "gatsby";
+import { Grid } from '@material-ui/core';
 import styled from "styled-components"
 
-
-const NavBarContainer = styled.nav`
-  flex: 0 1 auto;
-  flex-grow: 0;
-  flex-shrink: 1;
-  flex-basis: auto;
+const StyledLink = styled(props => <Link {...props} />)`
+  text-decoration: none;
+  color: white;
+  margin-right: 20px;
 `;
-
-const NavBarList = styled.ul`
-  display: flex;
-`;
-const NavBarItem = styled.li`
-  flex: 0 1 auto;
-  flex-grow: 0;
-  flex-shrink: 1;
-  flex-basis: auto;
-  display: inline-block;
-  padding-right: 35px;
-`;
+const NavBarContainer = styled.div`
+  padding-right: 20px;
+`
 
 const NavBar = () => (
   <NavBarContainer>
-    <NavBarList>
-      <NavBarItem>
-        <Link to="/item1">
-          item 1
-        </Link>
-      </NavBarItem>
-      <NavBarItem>
-        <Link to="/item2">
-          item 2
-        </Link>
-      </NavBarItem>
-      <NavBarItem>
-        <Link to="/item3">
-          item 3
-        </Link>
-      </NavBarItem>
-    </NavBarList>
+    <Grid
+      container
+      spacing={1}
+      justify="flex-end"
+      alignItems="center"
+    >
+      <StyledLink to="/item1">
+        item 1
+      </StyledLink>
+      <StyledLink to="/item1">
+        item 2
+      </StyledLink>
+      <StyledLink to="/item1">
+        item 3
+      </StyledLink>
+    </Grid>
   </NavBarContainer>
 )
 
