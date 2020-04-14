@@ -8,7 +8,14 @@ module.exports = {
   plugins: [
     `gatsby-plugin-netlify-cms`,
     `gatsby-transformer-remark`,
-    `gatsby-plugin-styled-components`,
+    {
+      resolve: `gatsby-plugin-material-ui`,
+      options: {
+        stylesProvider: {
+          injectFirst: true,
+        },
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -16,5 +23,6 @@ module.exports = {
         path: `${__dirname}/blog`,
       },
     },
+    `gatsby-plugin-styled-components`,
   ],
 }

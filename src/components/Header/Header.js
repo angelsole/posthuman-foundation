@@ -2,7 +2,17 @@
 import React from "react"
 import { Link } from "gatsby";
 import styled from "styled-components"
-import { Grid } from '@material-ui/core';
+import {
+  AppBar,
+  Button,
+  Grid,
+  Hidden,
+  IconButton,
+  Typography,
+  Toolbar,
+} from '@material-ui/core';
+import MenuIcon from '@material-ui/icons/Menu';
+
 
 import NavBar from '../NavBar';
 
@@ -29,32 +39,51 @@ const HeaderContainer = styled.div`
 
 const Header = () => (
   <HeaderContainer>
-    <Grid
-      container
-      spacing={3}
-      justify="space-between"
-      alignItems="center"
-    >
-      <Grid item xs={3}>
-        <StyledLink to="/">
-          <Grid
-            container
-            spacing={2}
-            alignItems="center"
-          >
-            <Grid item xs={2}>
-              <Logo alt="Posthuman Foundation Logo" src={logo} />
+    <Hidden smDown>
+      <Grid
+        container
+        spacing={3}
+        justify="space-between"
+        alignItems="center"
+      >
+        <Grid item xs={12} sm={3} >
+          <StyledLink to="/">
+            <Grid
+              container
+              spacing={2}
+              alignItems="center"
+            >
+              <Grid item xs={2}>
+                <Logo alt="Posthuman Foundation Logo" src={logo} />
+              </Grid>
+              <Grid item xs={10}>
+                <Title>Posthuman Foundation</Title>
+              </Grid>
             </Grid>
-            <Grid item xs={10}>
-              <Title>Posthuman Foundation</Title>
-            </Grid>
+          </StyledLink>
+        </Grid>
+          <Grid item xs={9}>
+            <NavBar />
           </Grid>
-        </StyledLink>
       </Grid>
-      <Grid item xs={9}>
-        <NavBar />
-      </Grid>
-    </Grid>
+    </Hidden>
+    <Hidden smUp>
+      <AppBar position="static">
+        <Toolbar>
+          <IconButton
+            edge="start"
+            color="inherit"
+            aria-label="menu"
+          >
+            <MenuIcon />
+          </IconButton>
+          <Typography variant="h6">
+            News
+          </Typography>
+          <Button color="inherit">Login</Button>
+        </Toolbar>
+      </AppBar>
+    </Hidden>
   </HeaderContainer>
 )
 
