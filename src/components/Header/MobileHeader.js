@@ -15,7 +15,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 
 import menuOptions from '../../utils/menuOptions';
 
-import logo from '../../assets/images/logo.svg';
+import logo from '../../assets/images/logo-black.svg';
 
 
 const Logo = styled.img`
@@ -25,6 +25,9 @@ const Logo = styled.img`
 const StyledMaterialTitle= styled(props => <Typography {...props} />)`
   font-family: 'SpaceRanger' !important;
   font-size: 1rem !important;
+`;
+const StyledMaterialItem= styled(props => <ListItem {...props} />)`
+  font-family: 'SpaceRanger' !important;
 `;
 
 const MobileHeader = () => {
@@ -58,11 +61,11 @@ const MobileHeader = () => {
           >
             <List>
               {menuOptions.map(item => (
-                <ListItem>{item.name}</ListItem>
+                <StyledMaterialItem>{item.name}</StyledMaterialItem>
               ))}
             </List>
             </Drawer>
-          <StyledMaterialTitle variant="h1">Posthuman foundation</StyledMaterialTitle>
+          <StyledMaterialTitle variant="h6">Posthuman foundation</StyledMaterialTitle>
           <Logo alt="Posthuman Foundation Logo" src={logo} />
         </Grid>
       </Toolbar>

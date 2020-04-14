@@ -19,7 +19,7 @@ body {
 }
 
 div, h1, h2, h3, h4, h5, h6, p {
-  font-family: 'SpaceRanger', sans-serif, arial;
+  font-family: 'Roboto', sans-serif, arial;
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -39,4 +39,8 @@ b {
 input, label, select {
   font-family: 'Roboto', sans-serif, arial;
   text-overflow: ellipsis;
+}
+
+* {
+  box-sizing: border-box;
 }

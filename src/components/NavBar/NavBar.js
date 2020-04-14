@@ -5,9 +5,10 @@ import { Grid } from '@material-ui/core';
 import styled from "styled-components"
 
 const StyledLink = styled(props => <Link {...props} />)`
-  text-decoration: none;
   color: white;
+  font-family: 'SpaceRanger';
   margin-right: 20px;
+  text-decoration: none;
 `;
 const NavBarContainer = styled.div`
   padding-right: 20px;
