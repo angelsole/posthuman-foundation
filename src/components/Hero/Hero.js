@@ -11,13 +11,22 @@ const Section = styled.section`
   width: 100%;
   height: 100%;
   z-index: -1;
+  overflow: hidden;
+`
+
+const Video = styled.video`
+@media (max-width: 960px) {
+  position: absolute;
+  top: 0;
+  left: -50%;
+}
 `
 
 const Hero = () => (
   <Section>
-    <video muted autoPlay playsInline loop poster="true">
+    <Video muted autoPlay playsInline loop poster="true">
       <source src={space} />
-    </video>
+    </Video>
   </Section>
 );
 

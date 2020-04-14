@@ -1,14 +1,13 @@
 import React from "react"
 import 'typeface-roboto';
 
-import Header from '../components/Header';
+import MainLayout from '../components/MainLayout';
 import Hero from '../components/Hero';
 
 import '../assets/css/global.css';
 
 export default () => (
-  <div>
-    <Header />
+  <MainLayout>
     <Hero />
-  </div>
+  </MainLayout>
 )
