@@ -1,6 +1,5 @@
 
 import React from "react"
-import { Link } from "gatsby";
 import styled from "styled-components"
 import { Hidden } from '@material-ui/core';
 
@@ -18,7 +17,7 @@ const Header = () => (
     <Hidden smDown>
       <DesktopHeader />
     </Hidden>
-    <Hidden smUp>
+    <Hidden mdUp>
       <MobileHeader />
     </Hidden>
   </HeaderContainer>

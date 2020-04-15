@@ -14,12 +14,12 @@ body {
   color: #f1f1f1;
   font-family: 'Roboto', sans-serif, arial;
   margin: 0;
-  overflow: hidden;
+  overflow-x: hidden;
   padding: 0;
 }
 
 div, h1, h2, h3, h4, h5, h6, p {
-  font-family: 'SpaceRanger', sans-serif, arial;
+  font-family: 'Roboto', sans-serif, arial;
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -39,4 +39,8 @@ b {
 input, label, select {
   font-family: 'Roboto', sans-serif, arial;
   text-overflow: ellipsis;
+}
+
+* {
+  box-sizing: border-box;
 }

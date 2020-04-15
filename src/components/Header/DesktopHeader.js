@@ -6,14 +6,15 @@ import { Grid } from '@material-ui/core';
 
 import NavBar from '../NavBar';
 
-import logo from '../../assets/images/logo.svg';
+import logo from '../../assets/images/logo-black.svg';
 
 const Logo = styled.img`
   height: 100%;
   width: 100%;
 `
-const Title = styled.h1`
+const Title = styled.p`
   color: white;
+  font-family: 'SpaceRanger';
   font-size: 24px;
   margin-left: 15px;
 `
