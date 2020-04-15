@@ -1,10 +1,10 @@
 @font-face {
   font-family: "SpaceRanger";
+  font-display: fallback;
   src:
   url("../../../static/fonts/spaceRanger/spacerangertitle-webfont.woff") format("woff"),
   url('../../../static/fonts/spaceRanger/spacerangertitle-webfont.woff2') format('woff2');
 }
-
 
 li {
   list-style-type: none;
@@ -12,17 +12,19 @@ li {
 
 body {
   color: #f1f1f1;
+  background: #0F4C81;
   font-family: 'Roboto', sans-serif, arial;
   margin: 0;
   overflow-x: hidden;
   padding: 0;
 }
 
-div, h1, h2, h3, h4, h5, h6, p {
+p {
   font-family: 'Roboto', sans-serif, arial;
 }
 
-h1, h2, h3, h4, h5, h6, p {
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'SpaceRanger';
   white-space: pre-wrap;
   word-wrap: break-word;
 }

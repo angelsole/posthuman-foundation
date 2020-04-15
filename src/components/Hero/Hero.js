@@ -11,6 +11,7 @@ import ArrowRightAltIcon from '@material-ui/icons/ArrowRightAlt';
 
 import space from '../../assets/videos/space_earth.mp4';
 
+
 const VideoContainer = styled.div`
   position: absolute;
   top: 0;
@@ -31,8 +32,10 @@ const Video = styled.video`
 
 const HeroContent = styled.div`
   padding-top: 200px;
+  padding-bottom: 150px;
   @media (max-width: 960px) {
     padding-top: 100px;
+    padding-bottom: 50px;
   }
 `
 
@@ -47,6 +50,7 @@ const Overlay = styled.div`
 `
 
 const Title= styled(props => <Typography {...props} />)`
+  font-family: 'SpaceRanger' !important;
   font-size: 4rem !important;
 `;
 
@@ -79,7 +83,7 @@ const Hero = () => (
             justify="center"
             alignItems="center"
           >
-            <Title variant="h1">Únete al futuro</Title>
+            <Title variant="h2">Únete al futuro</Title>
             <Description>Posthuman foundation persigue y promueve el mejoramiento humano. El desarrollo tecnológico exponencial está haciendo posible el nacimiento de un nuevo hombre. Sé parte del futuro y únete a nosotros para impulsar el conocimiento Posthumano.</Description>
           </Grid>
             <WhiteButton
